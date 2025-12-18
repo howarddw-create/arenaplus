@@ -37,14 +37,11 @@ jobs:
           zip -r ../arena-plus-extension-dist.zip .
           cd ..
 
-      - name: Create Release
-        id: create_release
-        uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files: arena-plus-extension-dist.zip
-          draft: false
-          prerelease: false
-          generate_release_notes: true
+      - name: Create Release and Upload Asset
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create ${{ github.ref_name }} \
+            arena-plus-extension-dist.zip \
+            --generate-notes \
+            --verify-tag

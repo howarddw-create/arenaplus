@@ -8,7 +8,7 @@ Since this extension is in active development, you can install it manually using
 
 ### 1. Download the Extension
 1. Go to the [Releases](https://github.com/plusonarena/arenaplus/releases) page of this repository.
-2. Find the latest version (e.g., `v2.0.1`).
+2. Find the latest version (e.g., `v2.0.2`).
 3. ⚠️ **IMPORTANT**: Download the `arena-plus-extension-dist.zip` file from the **Assets** section.  
    *Do NOT download the "Source code" zip, as it will not work.*
 4. Extract (unzip) the downloaded file to a folder on your computer.
