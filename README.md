@@ -62,7 +62,7 @@ If you want to contribute or build the extension from source:
 
 ## 📄 License
 
-This project is private and for internal use.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
