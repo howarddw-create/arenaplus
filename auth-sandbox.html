@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authenticating...</title>
+  <link rel="stylesheet" href="/src/index.css">
+</head>
+<body>
+  <div class="fixed inset-0 grid place-items-center px-4">
+    <div class="card-section w-full max-w-md p-6 text-center">
+      <h1 class="text-xl font-semibold text-slate-800">Authenticating…</h1>
+      <p class="mt-1 text-sm text-slate-500">Please wait, this window will close automatically.</p>
+
+      <div class="mt-6 flex items-center justify-center">
+        <span class="inline-block h-10 w-10 animate-spin rounded-full border-2 border-blue-500 border-t-transparent"></span>
+      </div>
+
+      <div class="mt-6 h-1 w-full overflow-hidden rounded-full bg-gradient-to-r from-blue-500/15 to-emerald-500/15">
+        <div class="h-full w-1/3 animate-pulse bg-gradient-to-r from-blue-500 to-emerald-500"></div>
+      </div>
+    </div>
+  </div>
+  <script src="/src/sandbox/auth.ts" type="module"></script>
+</body>
+</html>

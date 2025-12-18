@@ -1,0 +1,7 @@
+node_modules
+dist
+package-lock.json
+.DS_Store
+vite.config.ts.timestamp-1750699682727-d036cf3f95831.mjs
+.env
+.vscode

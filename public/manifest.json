@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "Arena Plus",
+  "version": "2.0.0",
+  "description": "The Arena Plus Chrome Extension.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "webRequest",
+    "cookies"
+  ],
+  "host_permissions": [
+    "https://arena.social/*",
+    "https://*.arena.social/*",
+    "https://*.dexscreener.com/*",
+    "https://api.starsarena.com/*",
+    "*://*.arenapro.io/*"
+  ],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "src/background/background.ts",
+    "type": "module"
+  },
+  "icons": {
+    "128": "icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.arena.social/*",
+        "https://arena.social/*",
+        "https://www.x.com/*/following",
+        "https://x.com/*"
+      ],
+      "js": [
+        "src/content/content.ts"
+      ],
+      "type": "module"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "auth-sandbox.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
